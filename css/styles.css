@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /**
- * @author Prénom Nom courriel
+ * @author Vincent Hébert
  *
  * TABLE DES MATIERES
  * Normalize
@@ -23,15 +23,40 @@
 
 /* Utilitaires
    ========================================================================== */
-
+@import url(_utilitaires.css);
 
 /* Charte typographique
    ========================================================================== */
-
+@import url(_typo.css);
 
 /* Grille
    ========================================================================== */
-
+@import url(_grille.css);
 
 /* Mise en page
    ========================================================================== */
+.icone {
+    display: inline-block;
+    width:32px;
+    height:32px;
+    background-image: url(good-warning-error.png);
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    transform: scale(0.6, 0.6);
+}
+.icone--ok {
+    background-position:0 0;
+}
+.icone--avertissement {
+    background-position:-34px 0;
+}
+
+input:focus, textera:focus, keygen:focus, select:focus {
+    outline-offset: 0px;
+}
+:focus{
+    outline: -webkit-focus-ring-color auto 5px;
+}
+.erreur{
+    color: red;
+}

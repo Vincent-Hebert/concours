@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TP4 | Vincent Hébert</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" href="images/favicon.ico">
+    </head>
+    <body>
+    <div class="conteneur">
+        <header role="banner">
+            <picture>
+                <source srcset="images/bandeau_1200.jpg" media="(min-width: 601px)">
+                <img src="images/bandeau_600.jpg" alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
+            </picture>
+        </header>
+        <main class="rangee" role="main">
+            <h1>Concours</h1>
+            <aside class="cols-4-de-12" role="complementary">
+                <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
+                <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la destination de son choix!</p>
+                <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
+            </aside>
+            <form action="index.html" method="post" class="cols-8-de-12" role="form">
+                <fieldset>
+                    <!--Ouverture Coupon de participation -->
+                    <legend>
+                        <h2>Coupon de participation</h2>
+                    </legend>
+                    <fieldset>
+                        <!--Ouverture Nom complet -->
+                        <legend>
+                            <h3>Nom complet</h3>
+                        </legend>
+                        <div class="ctnValidation">
+                        <p>
+                            <label for="prenom">Prénom</label>
+                            <input type="text" name="prenom" id="prenom" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                        </p>
+                        <p>
+                            <label for="nom">Nom</label>
+                            <input type="text" name="nom" id="nom" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                        </p>
+                        <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                            Le prénom ou le nom comporte un ou plusieurs caractères interdits.
+                        </p>
+                        </div>
+                    </fieldset>
+                    <!--Fermeture Nom complet -->
+                    <div class="ctnValidation">
+                    <p>
+                        <label for="adresse">Adresse</label>
+                        <input type="text" name="adresse" id="adresse" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                        L'adresse est requise.
+                    </p>
+                    </div>
+                    <div class="ctnValidation">
+                    <p>
+                        <label for="ville">Ville</label>
+                        <input type="text" name="ville" id="ville" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                        Attention, le nom de la ville comporte un ou plusieurs coractères interdits.
+                    </p>
+                    </div>
+                    <div class="ctnValidation">
+                    <p>
+                        <label for="pays">Pays/Province ou État</label>
+                        <select name="pays" id="pays">
+                            <option disabled="" selected="">Pays/Province ou État</option>
+                            <optgroup label="Canada">
+                                <option value="AB">Alberta</option>
+                                <option value="BC">British Columbia</option>
+                                <option value="MB">Manitoba</option>
+                                <option value="NB">New Brunswick</option>
+                                <option value="NL">Newfoundland and Labrador</option>
+                                <option value="NS">Nova Scotia</option>
+                                <option value="ON">Ontario</option>
+                                <option value="PE">Prince Edward Island</option>
+                                <option value="QC">Quebec</option>
+                                <option value="SK">Saskatchewan</option>
+                                <option value="NT">Northwest Territories</option>
+                                <option value="NU">Nunavut</option>
+                                <option value="YT">Yukon</option>
+                            </optgroup>
+                            <optgroup label="États-Unis">
+                                <option value="AL">Alabama</option>
+                                <option value="AK">Alaska</option>
+                                <option value="AZ">Arizona</option>
+                                <option value="AR">Arkansas</option>
+                                <option value="CA">California</option>
+                                <option value="CO">Colorado</option>
+                                <option value="CT">Connecticut</option>
+                                <option value="DE">Delaware</option>
+                                <option value="DC">District Of Columbia</option>
+                                <option value="FL">Florida</option>
+                                <option value="GA">Georgia</option>
+                                <option value="HI">Hawaii</option>
+                                <option value="ID">Idaho</option>
+                                <option value="IL">Illinois</option>
+                                <option value="IN">Indiana</option>
+                                <option value="IA">Iowa</option>
+                                <option value="KS">Kansas</option>
+                                <option value="KY">Kentucky</option>
+                                <option value="LA">Louisiana</option>
+                                <option value="ME">Maine</option>
+                                <option value="MD">Maryland</option>
+                                <option value="MA">Massachusetts</option>
+                                <option value="MI">Michigan</option>
+                                <option value="MN">Minnesota</option>
+                                <option value="MS">Mississippi</option>
+                                <option value="MO">Missouri</option>
+                                <option value="MT">Montana</option>
+                                <option value="NE">Nebraska</option>
+                                <option value="NV">Nevada</option>
+                                <option value="NH">New Hampshire</option>
+                                <option value="NJ">New Jersey</option>
+                                <option value="NM">New Mexico</option>
+                                <option value="NY">New York</option>
+                                <option value="NC">North Carolina</option>
+                                <option value="ND">North Dakota</option>
+                                <option value="OH">Ohio</option>
+                                <option value="OK">Oklahoma</option>
+                                <option value="OR">Oregon</option>
+                                <option value="PA">Pennsylvania</option>
+                                <option value="RI">Rhode Island</option>
+                                <option value="SC">South Carolina</option>
+                                <option value="SD">South Dakota</option>
+                                <option value="TN">Tennessee</option>
+                                <option value="TX">Texas</option>
+                                <option value="UT">Utah</option>
+                                <option value="VT">Vermont</option>
+                                <option value="VA">Virginia</option>
+                                <option value="WA">Washington</option>
+                                <option value="WV">West Virginia</option>
+                                <option value="WI">Wisconsin</option>
+                                <option value="WY">Wyoming</option>
+                            </optgroup>
+                        </select>
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                        La province ou l'état d'origine doit être précisé.
+                    </p>
+                    </div>
+                    <div class="ctnValidation">
+                    <p>
+                        <label for="codepostal">Code postal (X1X 1X1)</label>
+                        <input type="text" name="codepostal" id="codepostal" title="Exemple (X1X 1X1)" required maxlength="7">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                        Le code postal doit respecter le format X1X 1X1.
+                    </p>
+                    </div>
+                    <div class="ctnValidation">
+                    <p>
+                        <label for="courriel">Courriel</label>
+                        <input type="email" name="courriel" id="courriel" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                    </p>
+                    <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                        Attention, le courriel comporte un ou plusieurs caractères interdits.
+                    </p>
+                    </div>
+                    <fieldset>
+                        <legend><h3>Téléphone (indicatif -numéro)</h3></legend>
+                        <div class="ctnValidation">
+                        <p>
+                            <label for="indicatif">Indicatif</label>
+                            <input type="tel" name="indicatif" id="indicatif" required maxlength="3">
+                        </p>
+                        <p>--</p>
+                        <p>
+                            <label for="numero">Numéro</label>
+                            <input type="tel" name="numero" id="numero" required maxlength="7">
+                        </p>
+                        <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                            Attention, le numéra de téléphone ne doit pas comporter d'espace ou de trait d'union.
+                        </p>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <!--Fermeture Coupon de participation -->
+                <fieldset>
+                    <!--Ouverture Question du jour -->
+                    <legend><h2>Question du jour</h2></legend>
+                    <fieldset>
+                        <legend><h2>Date a laquelle la question a été posée</h2></legend>
+                        <div class="cols-4-de-12">
+                            <div class="ctnValidation">
+                            <p>
+                                <!-- jour -->
+                                <label for="jour">JOUR</label>
+                                <input type="text" name="jour" id="jour" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                            </p>
+                            <p>
+                                <label for="mois">MOIS</label>
+                                <select name="mois" id="mois">
+                                    <option disabled="" selected="">Sélectionner</option>
+                                        <option value="JA">Janvier</option>
+                                        <option value="FE">Février</option>
+                                        <option value="MA">Mars</option>
+                                        <option value="AV">Avril</option>
+                                        <option value="MAI">Mai</option>
+                                        <option value="JUIN">Juin</option>
+                                        <option value="JUI">Juillet</option>
+                                        <option value="AO">Août</option>
+                                        <option value="SE">Septembre</option>
+                                        <option value="OC">Octobre</option>
+                                        <option value="NO">Novembre</option>
+                                        <option value="DE">Décembre</option>
+                                    </optgroup>
+                                </select>
+                            </p>
+                            <p>
+                                <!-- année -->
+                                <label for="annee">ANNÉE</label>
+                                <input type="text" name="annee" id="annee" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                            </p>
+                            <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                                SVP, entrez la date complète.
+                            </p>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset>
+                        <legend><h2>Lequel de ces monuments est un mausolée?</h2></legend>
+                        <div class="ctnValidation">
+                        <p>
+                            <input type="radio" id="Château" name="Question" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                            <label for="Château"><img src="images/chateaudIf-small.jpg" alt="Château If">
+                        <p>Le château d'If</p>
+                        </label>
+                        </p>
+                        <p>
+                            <input type="radio" id="Palais" name="Question">
+                            <label for="Palais"><img src="images/palaisluxembourg-small.jpg" alt="Palais luxembourg">
+                        <p>Le palais de </p>
+                        </label>
+                        </p>
+                        <p>
+                            <input type="radio" id="Taj" name="Question">
+                            <label for="Taj"><img src="images/tajmahal-small.jpg" alt="Taj mahal">
+                        <p>Le Taj Mahal</p>
+                        </label>
+                        </p>
+                        <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                            Veuiller repondre à la question du jour.
+                        </p>
+                        </div>
+                    </fieldset>
+                </fieldset>
+                <!--Fermeture Question du jour -->
+                <p>
+                    <input type="checkbox" id="règlement">
+                    <label for="règlement">J'ai lu et j'accpete le règlement du concours et je confirme avoir atteint l'âge de majorité dans ma province de résidence</label>
+                </p>
+                <p class="erreur">
+                        <span>
+                            <span class="screen-reader-only">Attention</span>
+                            <span class="icone icone--avertissement" aria-hidden="true"></span>
+                        </span>
+                    SVP, acceptez le règlement du concours.
+                </p>
+                <p>
+                    <input type="checkbox" id="documentation">
+                    <label for="documentation">Oui, j'accepte de recevoir de la documentation de Radio-Canada</label>
+                </p>
+                <p>
+                    <button type="button" id="btSoumettre">Soumettre le formulaire</button>
+                </p>
+            </form>
+        </main>
+    </div>
+    <footer role="contentinfo">
+        <small>© 2021, Prénom Nom.
+        Réalisé dans le cadre du cours Intégration II,
+        Programme TIM, Cégep de Sainte-Foy.</small>
+    </footer>
+    </body>
+    </html>
