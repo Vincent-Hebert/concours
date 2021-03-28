@@ -87,13 +87,26 @@ aside {
 fieldset{
 
 }
-input:focus, textera:focus, keygen:focus, select:focus {
-    outline-offset: 0px;
-}
-:focus{
-    outline: -webkit-focus-ring-color auto 5px;
-}
 h1{
     margin: 5px;
     display: block;
+}
+.nom .rangee,
+.prenom .rangee,
+.indicatif .rangee,
+.numero .rangee,
+.jour .rangee,
+.mois .rangee.
+.annee .rangee {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+:focus{
+    outline: #349194 auto 5px;
+}
+footer {
+    display: flex;
+    justify-content: center;
 }

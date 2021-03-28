@@ -1,5 +1,55 @@
 /* Validation de formulaire
    =================================*/
+label {
+    display: block;
+}
+input[type=text],
+input[type=email],
+input[type=number],
+input[type=tel] {
+    display: inline-block;
+    width: calc(100% - 38px);
+}
+input + label {
+    display: inline-block;
+}
+
+legend{
+    padding: 0 0.5rem 0 0.25rem;
+}
+
+/*** Messages d'erreur ***/
+.ctnValidation p{
+    margin-bottom:0;
+}
+.erreur__message{
+    margin-top:0;
+    color:red;
+}
+.erreur__message:empty{
+    display: none;
+}
+
+/*** Signaler les éléments en erreur ***/
+input.erreur {
+    border: 1px solid red;
+}
+
+/*** Bouton de soumission ***/
+button{
+    padding: 0.5rem;
+    background-color: #d6dfcf;
+}
+button:hover,
+button:focus{
+    background-color: #dfce99;
+}
+
+/*** alignement centré des textes (pour le bouton de soumission! ***/
+.alignCentre{
+    text-align: center;
+}
+/*=========================================================*/
 .erreur {
     color: red;
 }
@@ -11,16 +61,16 @@
     display: inline-block;
     width:32px;
     height:32px;
-    background-image: url(images/good-warning-error.png);
+    background-image: url(http://localhost:63342/tp4/images/good-warning-error.png);
     background-repeat: no-repeat;
     vertical-align: middle;
     transform: scale(0.75, 0.75);
 }
 
 .icone--ok {
-
+    background-position:0 0;
 }
 
 .icone--avertissement {
-
+    background-position:-34px 0;
 }

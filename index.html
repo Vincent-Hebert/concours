@@ -27,23 +27,24 @@
             <form action="index.html" method="post" class="cols-8-de-12" role="form">
                 <fieldset class="participation">
                     <!--Ouverture Coupon de participation -->
-                    <legend>
-                        <h2>Coupon de participation</h2>
+                    <legend class="h2">
+                        Coupon de participation
                     </legend>
-                    <fieldset>
+                    <fieldset class="nom ctnValidation">
                         <!--Ouverture Nom complet -->
-                        <legend>
-                            <h3>Nom complet</h3>
+                        <legend class="h3">
+                            Nom complet
                         </legend>
-                        <div class="nom ctnValidation">
-                        <p>
+                        <div class="rangee">
+                        <p class="cols_4_de_12">
                             <label for="prenom">Prénom</label>
                             <input type="text" name="prenom" id="prenom" required pattern="[a-zA-ZÀ-ÿ \-]+">
                         </p>
-                        <p>
+                        <p class="cols_4_de_12">
                             <label for="nom">Nom</label>
                             <input type="text" name="nom" id="nom" required pattern="[a-zA-ZÀ-ÿ \-]+">
                         </p>
+                        </div>
                         <p class="erreur">
                         <span>
                             <span class="screen-reader-only">Avertissement</span>
@@ -51,7 +52,6 @@
                         </span>
                             Le prénom ou le nom comporte un ou plusieurs caractères interdits.
                         </p>
-                        </div>
                     </fieldset>
                     <!--Fermeture Nom complet -->
                     <div class="adresse ctnValidation">
@@ -189,18 +189,20 @@
                         Attention, le courriel comporte un ou plusieurs caractères interdits.
                     </p>
                     </div>
-                    <fieldset>
-                        <legend><h3>Téléphone (indicatif -numéro)</h3></legend>
-                        <div class="tel ctnValidation">
-                        <p>
+                    <fieldset class="tel ctnValidation">
+                        <legend class="h3">
+                            Téléphone (indicatif -numéro)
+                        </legend>
+                        <div class="rangee">
+                        <p class="cols_4_de_12">
                             <label for="indicatif">Indicatif</label>
                             <input type="tel" name="indicatif" id="indicatif" required maxlength="3">
                         </p>
-                        <p>--</p>
-                        <p>
+                        <p class="cols_4_de_12">
                             <label for="numero">Numéro</label>
                             <input type="tel" name="numero" id="numero" required maxlength="7">
                         </p>
+                            </div>
                         <p class="erreur">
                         <span>
                             <span class="screen-reader-only">Avertissement</span>
@@ -208,23 +210,23 @@
                         </span>
                             Attention, le numéra de téléphone ne doit pas comporter d'espace ou de trait d'union.
                         </p>
-                        </div>
                     </fieldset>
                 </fieldset>
                 <!--Fermeture Coupon de participation -->
                 <fieldset class="question">
                     <!--Ouverture Question du jour -->
-                    <legend><h2>Question du jour</h2></legend>
-                    <fieldset>
-                        <legend><h2>Date a laquelle la question a été posée</h2></legend>
-                        <div class="cols-4-de-12">
-                            <div class="date ctnValidation">
-                            <p>
+                    <legend class="h2">Question du jour</legend>
+                    <fieldset class="date ctnValidation">
+                        <legend class="h4">
+                            Date a laquelle la question a été posée?
+                        </legend>
+                        <div class="rangee">
+                            <p class="cols-4-de-12">
                                 <!-- jour -->
                                 <label for="jour">JOUR</label>
                                 <input type="number" name="jour" id="jour" required>
                             </p>
-                            <p>
+                            <p class="cols-4-de-12">
                                 <label for="mois">MOIS</label>
                                 <select name="mois" id="mois">
                                     <option disabled="" selected="">Sélectionner</option>
@@ -243,11 +245,12 @@
                                     </optgroup>
                                 </select>
                             </p>
-                            <p>
+                            <p class="cols-4-de-12">
                                 <!-- année -->
                                 <label for="annee">ANNÉE</label>
                                 <input type="text" name="annee" id="annee" required pattern="[a-zA-ZÀ-ÿ \-]+">
                             </p>
+                        </div>
                             <p class="erreur">
                         <span>
                             <span class="screen-reader-only">Avertissement</span>
@@ -255,29 +258,30 @@
                         </span>
                                 SVP, entrez la date complète.
                             </p>
-                            </div>
-                        </div>
                     </fieldset>
-                    <fieldset>
-                        <legend><h2>Lequel de ces monuments est un mausolée?</h2></legend>
-                        <div class="question ctnValidation">
-                        <p>
+                    <fieldset class="question ctnValidation">
+                        <legend class="h2">
+                            Lequel de ces monuments est un mausolée?
+                        </legend>
+                        <div class="rangee">
+                        <p class="cols_4_de_12">
                             <input type="radio" id="Château" name="Question" required pattern="[a-zA-ZÀ-ÿ \-]+">
                             <label for="Château"><img src="images/chateaudIf-small.jpg" alt="Château If">Le château d'If
                         </label>
                         </p>
-                        <p>
+                        <p class="cols_4_de_12">
                             <input type="radio" id="Palais" name="Question">
                             <label for="Palais"><img src="images/palaisluxembourg-small.jpg" alt="Palais luxembourg">
                         Le palais de
                         </label>
                         </p>
-                        <p>
+                        <p class="cols_4_de_12">
                             <input type="radio" id="Taj" name="Question">
                             <label for="Taj"><img src="images/tajmahal-small.jpg" alt="Taj mahal">
                         Le Taj Mahal
                         </label>
                         </p>
+                        </div>
                         <p class="erreur">
                         <span>
                             <span class="screen-reader-only">Avertissement</span>
@@ -285,7 +289,6 @@
                         </span>
                             Veuiller repondre à la question du jour.
                         </p>
-                        </div>
                     </fieldset>
                 </fieldset>
                 <!--Fermeture Question du jour -->
@@ -311,9 +314,10 @@
         </main>
     </div>
     <footer role="contentinfo">
-        <small><p>© 2021, Vincent Hébert.</p>
-            <p>Réalisé dans le cadre du cours Intégration II,</p>
-            <p>Programme TIM, Cégep de Sainte-Foy.</p></small>
+        <small>
+            <p>© 2021, Vincent Hébert.</p>
+            <p>Réalisé dans le cadre du cours Intégration II, Programme TIM, Cégep de Sainte-Foy.</p>
+        </small>
     </footer>
     </body>
     </html>
