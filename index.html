@@ -16,14 +16,16 @@
             </picture>
         </header>
         <main class="rangee" role="main">
-            <h1>Concours</h1>
+            <div>
+                <h1>Concours</h1>
             <aside class="cols-4-de-12" role="complementary">
                 <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
                 <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la destination de son choix!</p>
                 <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
             </aside>
+                </div>
             <form action="index.html" method="post" class="cols-8-de-12" role="form">
-                <fieldset>
+                <fieldset class="participation">
                     <!--Ouverture Coupon de participation -->
                     <legend>
                         <h2>Coupon de participation</h2>
@@ -33,7 +35,7 @@
                         <legend>
                             <h3>Nom complet</h3>
                         </legend>
-                        <div class="ctnValidation">
+                        <div class="nom ctnValidation">
                         <p>
                             <label for="prenom">Prénom</label>
                             <input type="text" name="prenom" id="prenom" required pattern="[a-zA-ZÀ-ÿ \-]+">
@@ -44,7 +46,7 @@
                         </p>
                         <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                             Le prénom ou le nom comporte un ou plusieurs caractères interdits.
@@ -52,33 +54,33 @@
                         </div>
                     </fieldset>
                     <!--Fermeture Nom complet -->
-                    <div class="ctnValidation">
+                    <div class="adresse ctnValidation">
                     <p>
                         <label for="adresse">Adresse</label>
                         <input type="text" name="adresse" id="adresse" required pattern="[a-zA-ZÀ-ÿ \-]+">
                     </p>
                     <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                         L'adresse est requise.
                     </p>
                     </div>
-                    <div class="ctnValidation">
+                    <div class="ville ctnValidation">
                     <p>
                         <label for="ville">Ville</label>
                         <input type="text" name="ville" id="ville" required pattern="[a-zA-ZÀ-ÿ \-]+">
                     </p>
                     <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                         Attention, le nom de la ville comporte un ou plusieurs coractères interdits.
                     </p>
                     </div>
-                    <div class="ctnValidation">
+                    <div class="pays ctnValidation">
                     <p>
                         <label for="pays">Pays/Province ou État</label>
                         <select name="pays" id="pays">
@@ -155,33 +157,33 @@
                     </p>
                     <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                         La province ou l'état d'origine doit être précisé.
                     </p>
                     </div>
-                    <div class="ctnValidation">
+                    <div class="codepostal ctnValidation">
                     <p>
                         <label for="codepostal">Code postal (X1X 1X1)</label>
                         <input type="text" name="codepostal" id="codepostal" title="Exemple (X1X 1X1)" required maxlength="7">
                     </p>
                     <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                         Le code postal doit respecter le format X1X 1X1.
                     </p>
                     </div>
-                    <div class="ctnValidation">
+                    <div class="courriel ctnValidation">
                     <p>
                         <label for="courriel">Courriel</label>
                         <input type="email" name="courriel" id="courriel" required pattern="[a-zA-ZÀ-ÿ \-]+">
                     </p>
                     <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                         Attention, le courriel comporte un ou plusieurs caractères interdits.
@@ -189,7 +191,7 @@
                     </div>
                     <fieldset>
                         <legend><h3>Téléphone (indicatif -numéro)</h3></legend>
-                        <div class="ctnValidation">
+                        <div class="tel ctnValidation">
                         <p>
                             <label for="indicatif">Indicatif</label>
                             <input type="tel" name="indicatif" id="indicatif" required maxlength="3">
@@ -201,7 +203,7 @@
                         </p>
                         <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                             Attention, le numéra de téléphone ne doit pas comporter d'espace ou de trait d'union.
@@ -210,17 +212,17 @@
                     </fieldset>
                 </fieldset>
                 <!--Fermeture Coupon de participation -->
-                <fieldset>
+                <fieldset class="question">
                     <!--Ouverture Question du jour -->
                     <legend><h2>Question du jour</h2></legend>
                     <fieldset>
                         <legend><h2>Date a laquelle la question a été posée</h2></legend>
                         <div class="cols-4-de-12">
-                            <div class="ctnValidation">
+                            <div class="date ctnValidation">
                             <p>
                                 <!-- jour -->
                                 <label for="jour">JOUR</label>
-                                <input type="text" name="jour" id="jour" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                                <input type="number" name="jour" id="jour" required>
                             </p>
                             <p>
                                 <label for="mois">MOIS</label>
@@ -248,7 +250,7 @@
                             </p>
                             <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                                 SVP, entrez la date complète.
@@ -258,28 +260,27 @@
                     </fieldset>
                     <fieldset>
                         <legend><h2>Lequel de ces monuments est un mausolée?</h2></legend>
-                        <div class="ctnValidation">
+                        <div class="question ctnValidation">
                         <p>
                             <input type="radio" id="Château" name="Question" required pattern="[a-zA-ZÀ-ÿ \-]+">
-                            <label for="Château"><img src="images/chateaudIf-small.jpg" alt="Château If">
-                        <p>Le château d'If</p>
+                            <label for="Château"><img src="images/chateaudIf-small.jpg" alt="Château If">Le château d'If
                         </label>
                         </p>
                         <p>
                             <input type="radio" id="Palais" name="Question">
                             <label for="Palais"><img src="images/palaisluxembourg-small.jpg" alt="Palais luxembourg">
-                        <p>Le palais de </p>
+                        Le palais de
                         </label>
                         </p>
                         <p>
                             <input type="radio" id="Taj" name="Question">
                             <label for="Taj"><img src="images/tajmahal-small.jpg" alt="Taj mahal">
-                        <p>Le Taj Mahal</p>
+                        Le Taj Mahal
                         </label>
                         </p>
                         <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                             Veuiller repondre à la question du jour.
@@ -294,7 +295,7 @@
                 </p>
                 <p class="erreur">
                         <span>
-                            <span class="screen-reader-only">Attention</span>
+                            <span class="screen-reader-only">Avertissement</span>
                             <span class="icone icone--avertissement" aria-hidden="true"></span>
                         </span>
                     SVP, acceptez le règlement du concours.
@@ -310,9 +311,9 @@
         </main>
     </div>
     <footer role="contentinfo">
-        <small>© 2021, Prénom Nom.
-        Réalisé dans le cadre du cours Intégration II,
-        Programme TIM, Cégep de Sainte-Foy.</small>
+        <small><p>© 2021, Vincent Hébert.</p>
+            <p>Réalisé dans le cadre du cours Intégration II,</p>
+            <p>Programme TIM, Cégep de Sainte-Foy.</p></small>
     </footer>
     </body>
     </html>

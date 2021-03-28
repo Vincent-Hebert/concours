@@ -33,30 +33,67 @@
    ========================================================================== */
 @import url(_grille.css);
 
+/* Formulaire
+   ========================================================================== */
+@import url(_form.css);
+
 /* Mise en page
    ========================================================================== */
-.icone {
-    display: inline-block;
-    width:32px;
-    height:32px;
-    background-image: url(good-warning-error.png);
-    background-repeat: no-repeat;
-    vertical-align: middle;
-    transform: scale(0.6, 0.6);
+.conteneur{
+    padding:2rem;
 }
-.icone--ok {
-    background-position:0 0;
+@media(min-width:600px){
+    .conteneur{
+        max-width:1000px;
+        margin:auto;
+    }
 }
-.icone--avertissement {
-    background-position:-34px 0;
+body {
+    background: white;
 }
+@media (min-width: 600px) {
+    body {
+        background: linear-gradient(#70FFCB, #CFFFF6);
+        margin: 10px;
+        font-weight: 300;
+        font-size: 1.4rem;
+        line-height: 1.375;
+    }
+}
+/* ========================================================================== */
 
+form {
+    width: 100%;
+}
+@media (min-width: 600px) {
+    form {
+        width: 200%;
+    }
+}
+.participation {
+    background: #E3E3E3;
+}
+.question {
+    background: #E3E3E3;
+}
+aside {
+    background: none;
+}
+@media (min-width: 600px) {
+    aside {
+        background: #DCDCDC;
+    }
+}
+fieldset{
+
+}
 input:focus, textera:focus, keygen:focus, select:focus {
     outline-offset: 0px;
 }
 :focus{
     outline: -webkit-focus-ring-color auto 5px;
 }
-.erreur{
-    color: red;
+h1{
+    margin: 5px;
+    display: block;
 }
