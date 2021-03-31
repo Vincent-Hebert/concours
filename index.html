@@ -15,16 +15,17 @@
                 <img src="images/bandeau_600.jpg" alt="Concours ICI Première. Voyage de rêve. Au menu. Écoutez Gravel le Matin en semaine 5h30 au 95,1. Courez la chance de gagner un crédit voyage de 20 000$ ! Commandité par Ici Première, Montréal en Lumière, Bell et Voyages Traditours circuits et croisières.">
             </picture>
         </header>
+        <h1>Concours</h1>
         <main class="rangee" role="main">
-            <div>
-                <h1>Concours</h1>
+            <div class="concour">
             <aside class="cols-4-de-12" role="complementary">
                 <p>Complétez le coupon de participation et répondez à la question du jour ci-dessous.</p>
                 <p>30 finalistes accompagnés seront invités le jeudi 1er mars au restaurant Blumenthal pour un petit déjeuner préparé par le chef Rémi Brunelle. Parmi les finalistes présents, un grand gagnant s’envolera vers la destination de son choix!</p>
                 <p>Vous avez jusqu'au vendredi 9 février à midi pour participer. Bonne chance à tous!</p>
             </aside>
-                </div>
+            </div>
             <form action="index.html" method="post" class="cols-8-de-12" role="form">
+                <div class="participation">
                 <fieldset class="participation">
                     <!--Ouverture Coupon de participation -->
                     <legend class="h2">
@@ -212,7 +213,9 @@
                         </p>
                     </fieldset>
                 </fieldset>
-                <!--Fermeture Coupon de participation -->
+                </div>
+                    <!--Fermeture Coupon de participation -->
+                <div class="question">
                 <fieldset class="question">
                     <!--Ouverture Question du jour -->
                     <legend class="h2">Question du jour</legend>
@@ -260,24 +263,24 @@
                             </p>
                     </fieldset>
                     <fieldset class="question ctnValidation">
-                        <legend class="h2">
+                        <legend class="h4">
                             Lequel de ces monuments est un mausolée?
                         </legend>
                         <div class="rangee">
                         <p class="cols_4_de_12">
-                            <input type="radio" id="Château" name="Question" required pattern="[a-zA-ZÀ-ÿ \-]+">
-                            <label for="Château"><img src="images/chateaudIf-small.jpg" alt="Château If">Le château d'If
+                            <input class="opacity" type="radio" id="Château" name="Question" required pattern="[a-zA-ZÀ-ÿ \-]+">
+                            <label for="Château"><img class="question_jour" src="images/chateaudIf-small.jpg" alt="Château If">Le château d'If
                         </label>
                         </p>
                         <p class="cols_4_de_12">
-                            <input type="radio" id="Palais" name="Question">
-                            <label for="Palais"><img src="images/palaisluxembourg-small.jpg" alt="Palais luxembourg">
+                            <input class="opacity" type="radio" id="Palais" name="Question">
+                            <label for="Palais"><img class="question_jour" src="images/palaisluxembourg-small.jpg" alt="Palais luxembourg">
                         Le palais de
                         </label>
                         </p>
                         <p class="cols_4_de_12">
-                            <input type="radio" id="Taj" name="Question">
-                            <label for="Taj"><img src="images/tajmahal-small.jpg" alt="Taj mahal">
+                            <input class="opacity" type="radio" id="Taj" name="Question">
+                            <label for="Taj"><img class="question_jour" src="images/tajmahal-small.jpg" alt="Taj mahal">
                         Le Taj Mahal
                         </label>
                         </p>
@@ -291,6 +294,7 @@
                         </p>
                     </fieldset>
                 </fieldset>
+                </div>
                 <!--Fermeture Question du jour -->
                 <p>
                     <input type="checkbox" id="règlement">
